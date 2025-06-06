@@ -9,10 +9,11 @@ app.use(cors());
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: ["http://localhost:3000","https://tic-tac-60wj4d3u3-ken-lins-projects-98d57120.vercel.app"],
+    origin: ["http://localhost:3000","https://tic-tac-erbktevlp-ken-lins-projects-98d57120.vercel.app"],
     methods: ["GET", "POST"]
   }
 });
+
 
 const rooms = new Map();
 
