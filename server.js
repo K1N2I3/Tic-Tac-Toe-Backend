@@ -8,11 +8,12 @@ app.use(cors());
 
 const server = http.createServer(app);
 const io = new Server(server, {
-  cors: {
-    origin: ["http://localhost:3000","https://tic-tac-cj7hxbljn-ken-lins-projects-98d57120.vercel.app"],
-    methods: ["GET", "POST"]
-  }
-});
+    cors: {
+      origin: "*", // 临时允许所有域名，解决CORS问题
+      methods: ["GET", "POST"],
+      credentials: true
+    }
+  });
 
 
 const rooms = new Map();
